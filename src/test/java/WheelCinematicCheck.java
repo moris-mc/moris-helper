@@ -1,0 +1,9 @@
+import org.NJ.hwamaihelper.client.*;
+public class WheelCinematicCheck {
+ public static void main(String[] args){
+  for(int width:new int[]{320,640,960})for(int height:new int[]{240,360})for(int x:new int[]{-600,0,600})for(int y:new int[]{-400,0,400}){var layout=WheelLayout.create(width,height,110,x,y);if(layout.x()-layout.radius()<0||layout.x()+layout.radius()>width||layout.y()-layout.radius()<0||layout.y()+layout.radius()+20>height)throw new AssertionError("Wheel outside screen");if(layout.selection(layout.x(),layout.y())!=-1||layout.selection(0,0)!=-1)throw new AssertionError("Unsafe cancellation");if(layout.selection(layout.x(),layout.y()-layout.radius()/2)!=0)throw new AssertionError("Top sector changed");}
+  if(CinematicPath.ascentStage(600)!=0||CinematicPath.ascentStage(1020)!=1||CinematicPath.ascentStage(2160)!=2||CinematicPath.descentStage(1232)!=1||CinematicPath.descentStage(2240)!=2)throw new AssertionError("Sound cue alignment");
+  if(CinematicPath.height(0)!=0||CinematicPath.height(0.3)!=12||CinematicPath.height(0.65)!=40||CinematicPath.height(1)!=72)throw new AssertionError("Stage endpoints");if(CinematicPath.height(.21)!=CinematicPath.height(.33)||CinematicPath.height(.57)!=CinematicPath.height(.71)||CinematicPath.filter(0,0)!=0||CinematicPath.filter(1,0)!=1||CinematicPath.filter(2,CinematicPath.RETURN_MS)!=0)throw new AssertionError("Pause or blur envelope");double previous=0;for(int i=0;i<=1000;i++){double value=CinematicPath.height(i/1000.0);if(value<previous||value>72)throw new AssertionError("Nonmonotonic zoom");previous=value;}
+  if(CinematicPath.fadeOut(2400)!=0||CinematicPath.fadeOut(3000)!=1||CinematicPath.height(1-1)!=0)throw new AssertionError("Fade or restore");System.out.println("PASS: wheel screen bounds and cancel/top-sector selection; staged camera heights, monotonic ascent, fade and return endpoint.");
+ }
+}

@@ -1,0 +1,36 @@
+{
+  "schemaVersion": 1,
+  "id": "senyouhelper",
+  "version": "${version}",
+  "name": "moris`Helper`",
+  "description": "森友伺服器專用的客戶端輔助模組，將常用操作、伺服器資訊與 Discord 消息整合進遊戲。\n\n・Discord 遊玩狀態：連入森友時顯示伺服器活動資訊。\n・公告閱讀：在遊戲內查看 Discord 頻道，支援搜尋、未讀數字、圖片與表情符號。\n・消息通知：新公告以頂部訊息提示，可關閉通知或播放測試通知。\n・聊天媒體：預覽 Discord 傳來的圖片、GIF 與自訂表情，並可點開查看。\n・快捷選單：快速使用坐下、躺下、趴下、旋轉、家點、公共家點、飛行與戴帽指令。\n・玩家檢視：Shift＋G 檢視自己的角色、暱稱、餘額、上線總時數與首次加入時間。\n・容器預覽：按住預覽鍵查看準心所指容器內的物品圖示與數量，預設為右 Alt。\n・管理輪盤：提供有權限的管理員快捷操作，可調整按鍵、大小與位置。\n・傳送特效：分段鏡頭、色彩濾鏡與提示音，可自行關閉。\n\n按 X＋F 開啟設定，可調整快捷鍵或停用小幫手快捷功能；設定選單仍可開啟。\n伺服器資料與權限相關功能需要森友後端插件配合。",
+  "authors": [
+    "森友伺服器"
+  ],
+  "contact": {},
+  "environment": "client",
+  "entrypoints": {
+    "client": [
+      "org.NJ.hwamaihelper.client.HwamaihelperClient"
+    ]
+  },
+  "mixins": [
+    {
+      "config": "hwamaihelper.client.mixins.json",
+      "environment": "client"
+    }
+  ],
+  "depends": {
+    "fabricloader": ">=${loader_version}",
+    "fabric-api": "*",
+    "malilib": ">=0.30.2",
+    "minecraft": "${minecraft_version}",
+    "mcef-modern": ">=0.3.3"
+  },
+  "jars": [
+    {
+      "file": "META-INF/jars/mcef-modern-0.3.3+mc26.3.jcef146.0.10.jar"
+    }
+  ],
+  "icon": "icon.png"
+}

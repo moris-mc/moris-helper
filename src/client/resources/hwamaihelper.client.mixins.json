@@ -1,0 +1,22 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "org.NJ.hwamaihelper.mixin.client",
+  "compatibilityLevel": "JAVA_25",
+  "client": [
+    "ChatScreenMixin",
+    "ChatComponentMixin",
+    "GuiBannerMixin",
+    "MouseBannerMixin",
+    "PlayerInspectCameraMixin",
+    "TeleportInputMixin",
+    "TeleportMouseMixin",
+    "GuiMessageMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  },
+  "overwrites": {
+    "requireAnnotations": true
+  }
+}
