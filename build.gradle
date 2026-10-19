@@ -324,7 +324,9 @@ tasks.register('verifyModMetadata') {
   def metadata = new groovy.json.JsonSlurper().parse(layout.buildDirectory.file('resources/main/fabric.mod.json').get().asFile)
   assert metadata.authors == ['森友伺服器']
   assert metadata.description.readLines().size() >= 12
-  assert metadata.contact.isEmpty()
+  assert metadata.contact.homepage == 'https://github.com/moris-mc/moris-helper'
+  assert metadata.contact.sources == 'https://github.com/moris-mc/moris-helper'
+  assert metadata.contact.issues == 'https://github.com/moris-mc/moris-helper/issues'
   assert layout.buildDirectory.file('resources/main/' + metadata.icon).get().asFile.exists()
  }
 }

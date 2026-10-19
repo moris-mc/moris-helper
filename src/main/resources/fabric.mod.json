@@ -7,7 +7,7 @@
   "authors": [
     "森友伺服器"
   ],
-  "contact": {},
+  "contact": {"homepage": "https://github.com/moris-mc/moris-helper", "sources": "https://github.com/moris-mc/moris-helper", "issues": "https://github.com/moris-mc/moris-helper/issues"},
   "environment": "client",
   "entrypoints": {
     "client": [

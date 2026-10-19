@@ -63,7 +63,7 @@ public final class ChatImages {
  private static URI resolve(URI uri)throws Exception {
   if(!DiscordImageUrl.share(uri))return uri;
   for(int redirects=0;redirects<3;redirects++){
-   var response=HTTP.send(HttpRequest.newBuilder(uri).timeout(Duration.ofSeconds(10)).header("Accept","text/html").header("User-Agent","MorisHelper/1.13.1").GET().build(),HttpResponse.BodyHandlers.ofInputStream());
+   var response=HTTP.send(HttpRequest.newBuilder(uri).timeout(Duration.ofSeconds(10)).header("Accept","text/html").header("User-Agent","MorisHelper/1.0.0").GET().build(),HttpResponse.BodyHandlers.ofInputStream());
    try(var input=response.body()){
     if(response.statusCode()>=300&&response.statusCode()<400){URI next=uri.resolve(response.headers().firstValue("Location").orElseThrow());if(!DiscordImageUrl.share(next))throw new IOException("Unsupported share redirect");uri=next;continue;}
     if(response.statusCode()!=200)throw new IOException("Share page HTTP "+response.statusCode());
