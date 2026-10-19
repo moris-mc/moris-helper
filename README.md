@@ -1,6 +1,6 @@
-# moris`Helper` 1.11.0：總開關、輪盤調整與傳送鏡頭
+# moris`Helper` 1.0.0：總開關、輪盤調整與傳送鏡頭
 
-安裝：玩家端換上 morisHelper-1.11.0.jar 並重啟遊戲。伺服器停服備份後，以 morisfolia-helper-cinematic.jar 替換原 Moris 插件，再啟動；這是完整 Moris 插件，不要重複放兩份。
+安裝：玩家端換上 morisHelper-1.0.0.jar 並重啟遊戲。伺服器停服備份後，以 morisfolia-helper-cinematic.jar 替換原 Moris 插件，再啟動；這是完整 Moris 插件，不要重複放兩份。
 
 X + F 預設開啟「一般設定」。
 - 啟用小幫手：關閉後，模式輪盤、Shift + G 玩家檢視與容器預覽快捷鍵停用，容器預同步停止，傳送特效也停用；X + F 仍可開啟設定。聊天欄滑鼠按鈕、公告／通知與 Discord 狀態等原有背景功能保留。
@@ -23,11 +23,11 @@ Folia 原始專案已更新 DiscordFeedService.java、TeleportWorker.java、Home
 驗證：Java 25 兩端編譯、完整 Gradle 檢查通過；新增實際 MaLiLib 設定序列化／還原、SDL 預設與自訂輪盤按鍵、停用後保留設定鍵、輪盤邊界／取消與選擇、分段升高／淡出／返回檢查。伺服器橋接測試驗證 opt-in、拒絕無效偏好、成功 ID 匹配／去重、取消、關閉與登出清理。尚未在實際 Minecraft／Folia／光影環境完成同世界、跨世界及取消情境實測。
 
 
-# morisHelper 1.12.0
+# morisHelper 1.2.0
 
 ## 安裝
-玩家端：移除舊 morisHelper JAR，放入 morisHelper-1.12.0.jar 並重新啟動 Minecraft。
-伺服器端：以 morisfolia-helper-1.12.0.jar 替換現有 Moris 主插件，確保同一插件只有一份 JAR，正常重啟伺服器。這是完整 Moris 主插件，不是另外安裝的附加插件。尚未替你部署或重啟。
+玩家端：移除舊 morisHelper JAR，放入 morisHelper-1.2.0.jar 並重新啟動 Minecraft。
+伺服器端：以 morisfolia-helper-1.2.0.jar 替換現有 Moris 主插件，確保同一插件只有一份 JAR，正常重啟伺服器。這是完整 Moris 主插件，不是另外安裝的附加插件。尚未替你部署或重啟。
 兩端均需更新，才能接收新的 GIF 嵌入預覽與領地／傳送陣事件。
 
 ## GIF
@@ -52,11 +52,11 @@ X+F 的傳送特效開關及小幫手總開關仍生效；未安裝模組或關�
 原始碼已同步到提供的 Folia 專案。變更前備份位於同目錄 gif-cinematic-backup-*。
 
 
-# morisHelper 1.13.0
+# morisHelper 1.3.0
 
 ## 更新方式
-玩家：以 morisHelper-1.13.0.jar 替換舊版並重開遊戲。
-伺服器：以 morisfolia-helper-1.13.0.jar 替換 Moris 主插件，保留單一 Moris JAR，再正常重啟。兩端都需更新。尚未部署或重啟伺服器。
+玩家：以 morisHelper-1.3.0.jar 替換舊版並重開遊戲。
+伺服器：以 morisfolia-helper-1.3.0.jar 替換 Moris 主插件，保留單一 Moris JAR，再正常重啟。兩端都需更新。尚未部署或重啟伺服器。
 
 ## 傳送
 移除模糊後製，改成青藍色半透明濾鏡，強度逐漸進出；保留跨世界／遠距離淡出遮罩與既有特效開關。
@@ -78,11 +78,11 @@ Discord 自訂表情保留名稱作為無模組玩家的文字替代，模組端
 Folia 原始碼已同步；變更前備份在 chat-filter-backup-*。
 
 
-# morisHelper 1.13.1
+# morisHelper 1.3.1
 
 ## 更新
-玩家替換為 morisHelper-1.13.1.jar 並重開遊戲。
-伺服器以 morisfolia-helper-1.13.1.jar 替換 Moris 主插件，再正常重啟；兩端均需更新，且各只保留一份舊插件／模組的替代版本。尚未部署或重啟。
+玩家替換為 morisHelper-1.3.1.jar 並重開遊戲。
+伺服器以 morisfolia-helper-1.3.1.jar 替換 Moris 主插件，再正常重啟；兩端均需更新，且各只保留一份舊插件／模組的替代版本。尚未部署或重啟。
 
 ## GIF／MP4
 保留隱藏重複 GIF 網址，點擊媒體通知仍保留完整來源與 Discord 附件簽名。
