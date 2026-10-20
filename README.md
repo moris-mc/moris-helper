@@ -108,6 +108,10 @@ Klipy 等分享預覽可能是單格 GIF 封面，所以有 MP4 動畫時優先�
 這是解碼與打包驗證，尚未在實際 Minecraft 視窗驗證最終呈現。原始 Klipy 分享頁在本環境仍可能遇到網站驗證，正常情況下由伺服器 Discord 嵌入資訊提供媒體來源。
 Folia 原始碼已同步；變更前備份位於 media-icon-backup-*。
 
+## 致謝與功能啟發
+本模組的部分介面與功能設計，受到輝煌伺服器 Rice Chen_ 所開發模組的啟發，並已取得對方同意參考相關設計。
+感謝 Rice Chen_ 的分享與支持。相關功能由森友伺服器自行實作，並依森友的需求調整；原始設計的創意歸屬原作者。
+
 參考：
 - JCodec：https://github.com/jcodec/jcodec （BSD-2-Clause；授權隨包保留）
 - Klipy 媒體格式：https://docs.klipy.com/migrate-from-tenor/response-objects/content-formats
